@@ -6,5 +6,6 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("HEROKU_REDIS_OLIVE_URL") %>
+  url: <%= ENV.fetch("HEROKU_REDIS_OLIVE_URL") { 'redis://h:p1492419d27f2a726ec62caf40c710c6ca994edc3667b1373712a9cd75fe9809d@ec2-3-94-28-206.compute-1.amazonaws.com:8309'
+ } %>
   channel_prefix: message_me_production
