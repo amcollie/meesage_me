@@ -61,5 +61,9 @@ group :test do
   gem 'webdrivers', '~> 4.0'
 end
 
+group :production do
+  gem 'redis'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %w[mingw mswin x64_mingw jruby]
